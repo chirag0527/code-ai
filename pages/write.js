@@ -26,7 +26,7 @@ export default function Write(){
 
         <h3 className="output-title">Code</h3>
 
-        <div className="output"></div>
+        <div className="output glow"></div>
     </div>
     )
 }

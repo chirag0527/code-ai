@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Option from './options-card'
 
@@ -23,6 +24,18 @@ export default function Home() {
         document.body.style.background = '#000000'
     )
   }, [router.pathname])
+  const [scroll, setScroll] = useState(0);
+useEffect(() => {
+    function handleScroll() {
+      setScroll(window.scrollY);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  
+
 
   return (
     <>
@@ -42,9 +55,11 @@ export default function Home() {
           <p>Get Help Get Code</p>
           <button className='main-btn'>Scroll Down</button>
           <img src='/down-arrow.svg'></img>
+          <div className='gradient'></div>
         </div>
       </div>
-      <div className='selection-page'>
+      <div className='selection-page'
+      >
         <h1>Choose Your Path</h1>
         <div className='options-container'>
         <Option 

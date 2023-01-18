@@ -1,5 +1,6 @@
 export default function Option(props){
-    return(
+    return( 
+            <a href={props.link}>
             <div className='option-box'>
                 <div className='option-image'>
                 <img src={props.image}></img>
@@ -9,8 +10,8 @@ export default function Option(props){
                 </div>
                 <div className='option-description'>
                 <p>{props.description}</p>
-                <a href={props.link} className='link-to-page'>Head in here {`> >`}</a>  
+                Head in here {`>>`} 
                 </div>
-            
-    </div>
+            </div>
+            </a>
     )}

@@ -26,7 +26,7 @@ export default function Search(){
 
         <h3 className="output-title">The Error</h3>
 
-        <div className="output"></div>
+        <div className="output glow"></div>
     </div>
     )
 }

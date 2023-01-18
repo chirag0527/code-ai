@@ -25,7 +25,7 @@ export default function Convert(){
 
         <h3 className="output-title">Code</h3>
 
-        <div className="output"></div>
+        <div className="output glow "></div>
     </div>
     )
 }
